@@ -3,10 +3,10 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import HomeScreen from "./pantalla/Inicio";
-import StartMapScreen from "./pantalla/MapaEstelar";
-import DailyPicScreen from "./pantallas/FotosDiarias";
-import SpaceCraftScreen from "./pantalla/Nave espacial";
+import HomeScreen from "./screens/Home";
+import StartMapScreen from "./screens/StarMap";
+import DailyPicScreen from "./screens/DailyPic";
+import SpaceCraftScreen from "./screens/SpaceCraft";
 
 const Stack = createStackNavigator();
 
@@ -16,7 +16,7 @@ function App() {
       <Stack.Navigator initialRouteName="Inicio" screenOptions={{
         headerShown: false
       }}>
-        <Stack.Screen name="Inicio" component={HomeScreen} />
+      <Stack.Screen name="Inicio" component={HomeScreen} />
         <Stack.Screen name="Mapa estelar" component={StartMapScreen} />
         <Stack.Screen name="Foto diaria" component={DailyPicScreen} />
         <Stack.Screen name="Nave espacial" component={SpaceCraftScreen} />
